@@ -1,5 +1,6 @@
 package spring.cloud.merchant.service.impl;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import spring.cloud.merchant.clients.ProductsClient;
@@ -23,8 +24,19 @@ public class MerchantServiceImpl implements MerchantService {
 
     @Override
     public String getProducts() {
-        String products = productsClient.getProducts();
-        System.out.println(products);
-        return null;
+
+//        System.out.println(products);
+        return productsClient.getProducts();
     }
+
+    @Override
+    @HystrixCommand(fallbackMethod = "getHystrix")
+    public String testHystrix() {
+        throw new RuntimeException("chu cuo le");
+    }
+
+    public String getHystrix(){
+       return "this is a hys";
+    }
+
 }

@@ -7,4 +7,6 @@ package spring.cloud.merchant.service;
  */
 public interface MerchantService {
     String getProducts();
+
+    String testHystrix();
 }

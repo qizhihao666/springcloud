@@ -27,6 +27,12 @@ public class MerchantController {
     @RequestMapping("/getMerchantProducts")
     public void getMerchantProducts(){
         String products = merchantService.getProducts();
+        System.out.println(products);
+    }
+
+    public void testHys(){
+        String products = merchantService.testHystrix();
+        System.out.println(products);
     }
 
 }

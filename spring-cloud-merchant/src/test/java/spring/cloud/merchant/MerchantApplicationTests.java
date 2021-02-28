@@ -13,7 +13,9 @@ class MerchantApplicationTests {
 
     @Test
     void contextLoads() {
-        merchantController.getMerchantProducts();
+//        merchantController.getMerchantProducts();
+        merchantController.testHys();
+
     }
 
 }

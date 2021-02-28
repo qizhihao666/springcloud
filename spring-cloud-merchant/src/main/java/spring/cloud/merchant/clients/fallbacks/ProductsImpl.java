@@ -12,6 +12,6 @@ import spring.cloud.merchant.clients.ProductsClient;
 public class ProductsImpl implements ProductsClient {
     @Override
     public String getProducts() {
-        return null;
+        return "error";
     }
 }
