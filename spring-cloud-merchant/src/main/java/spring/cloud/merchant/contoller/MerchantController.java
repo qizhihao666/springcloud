@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import spring.cloud.merchant.service.MerchantService;
+import spring.cloud.redis.utils.RedisUtil;
 
 /**
  * 详细描述：MerchantController
@@ -13,6 +14,9 @@ import spring.cloud.merchant.service.MerchantService;
 @RestController
 @RequestMapping("/merchantController")
 public class MerchantController {
+
+    @Autowired
+    private RedisUtil redisUtil;
 
 //
 //    @Autowired

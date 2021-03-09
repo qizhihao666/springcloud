@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>spring.cloud</groupId>
-    <artifactId>eureka</artifactId>
+    <artifactId>spring-cloud-eureka</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>eureka</name>
     <description>eureka服务器</description>
@@ -18,11 +18,6 @@
         <spring-cloud.version>Hoxton.SR10</spring-cloud.version>
     </properties>
     <dependencies>
-        <dependency>
-            <groupId>spring.cloud</groupId>
-            <artifactId>common</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter</artifactId>
